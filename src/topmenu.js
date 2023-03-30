@@ -1,7 +1,7 @@
 import React from 'react';
 import { DropdownButton, Dropdown } from 'react-bootstrap';
 
-const topmenu = () => {
+const Topmenu = () => {
   return (
     <div className="top-menu">
       <Logo />
@@ -25,4 +25,4 @@ const Logo = () => {
 };
 
 
-export default topmenu;
+export default Topmenu;

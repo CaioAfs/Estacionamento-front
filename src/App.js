@@ -1,6 +1,6 @@
 import React from 'react';
-import Topmenu from './topmenu';
-import Estacionamento from './estacionamento';
+import Topmenu from './Topmenu';
+import Estacionamento from './Estacionamento';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
