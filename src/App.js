@@ -1,8 +1,9 @@
 import React from 'react';
-import Topmenu from './Topmenu';
+import Topmenu from './topmenu';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
-import Estacionamento from './Estacionamento';
+import Estacionamento from './estacionamento';
+
 
 const App = () => {
   return (
