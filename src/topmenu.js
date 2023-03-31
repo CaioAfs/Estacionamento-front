@@ -1,6 +1,7 @@
 import React from 'react';
 import { DropdownButton, Dropdown } from 'react-bootstrap';
 
+
 const Topmenu = () => {
   return (
     <div className="top-menu">
@@ -20,7 +21,7 @@ const Menu = () => {
 
 const Logo = () => {
   return(
-    <h1>Led Parking</h1>
+    <img src="logo.png" alt="Led Parking" style={{ width: '120px' }}/>
   );
 };
 
