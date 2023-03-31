@@ -14,17 +14,12 @@ function Estacionamento() {
       const sortedData = response.data
         .sort((a, b) => a.id - b.id)
         .map((item) => {
-          if (item.hora === null) {
-            // se for null, define as propriedades horas e minutos como null
-            return { ...item, horas: null, minutos: null };
+          if (item.tempoEstacionado === null) {
+            return { ...item, horas: null};
           } else {
-            // se não for null, converte a string da hora em um objeto Date
-            const date = new Date(item.hora);
-            // obtém as horas e os minutos a partir do objeto Date
-            const hours = date.getHours();
-            const minutes = date.getMinutes();
-            // retorna um novo objeto com as horas, minutos e as outras propriedades do item original
-            return { ...item, horas: hours, minutos: minutes };
+            const time = item.tempoEstacionado;
+            
+            return { ...item, horas: time};
           }
         });
       setVagas(sortedData);
@@ -49,7 +44,7 @@ function Estacionamento() {
               <React.Fragment key={item.id}>
                 {isSecondInPair && <td className='caminho-rua'></td>}
                 <td className='vaga' style={{ backgroundColor: item.temCarro ? '#9ef09e' : '#f19898' }} data-tem-carro={item.temCarro}>
-                  {item.id} {item.horas !== null && item.minutos !== null ? `- ${item.horas}:${item.minutos}` : ''}
+                  {item.id} {item.horas !== null ? `- ${item.horas}` : ''}
                 </td>
               </React.Fragment>
             );

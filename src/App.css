@@ -1,5 +1,5 @@
 .container {
-  max-width: 540px;
+  max-width: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,10 +14,6 @@
 .caminho-rua {
   width: 20px;
   background-color: rgb(184, 184, 184);
-}
-
-.caminho {
-  width: 10px;
 }
 
 .vaga {
